@@ -11,7 +11,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, Dialog
 import { useDispatch, useSelector } from "react-redux";
 import { addSavingsGoal } from "@/store/savingsGoalsSlice";
 import { generateFourDigitId } from "@/lib/utils";
-import { RootState } from "@/store";
 
 export function AddGoalButton() {
   const dispatch = useDispatch();
