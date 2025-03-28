@@ -38,12 +38,12 @@ export function IncomeVsExpensesChart() {
                             <div className="h-2 w-2 rounded-full bg-green-500" />
                             <div>Income</div>
                           </div>
-                          <div className="text-right font-medium">{formatCurrency(payload[0].value)}</div>
+                          <div className="text-right font-medium">{formatCurrency(Number(payload[0].value))}</div>
                           <div className="flex items-center gap-1">
                             <div className="h-2 w-2 rounded-full bg-red-500" />
                             <div>Expenses</div>
                           </div>
-                          <div className="text-right font-medium">{formatCurrency(payload[1].value)}</div>
+                          <div className="text-right font-medium">{formatCurrency(Number(payload[1].value))}</div>
                         </div>
                       </div>
                     );

@@ -55,9 +55,9 @@ export function ExpensesByCategoryChart() {
                             <div className="h-2 w-2 rounded-full" style={{ backgroundColor: payload[0].payload.color }} />
                             <div>{payload[0].name}</div>
                           </div>
-                          <div className="text-right font-medium text-gray-700">{formatCurrency(payload[0].value)}</div>
+                          <div className="text-right font-medium text-gray-700">{formatCurrency(Number(payload[0].value))}</div>
                           <div className="text-right text-sm text-gray-500">
-                            {`${Math.round((payload[0].value / chartData.reduce((sum, item) => sum + item.value, 0)) * 100)}%`}
+                            {`${Math.round((Number(payload[0].value) / chartData.reduce((sum, item) => sum + item.value, 0)) * 100)}%`}
                           </div>
                         </div>
                       </div>
