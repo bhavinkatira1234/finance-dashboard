@@ -48,7 +48,7 @@ export function TransactionList() {
                   </Badge>
                   <span className={`font-medium ${transaction.type === "income" ? "text-green-700" : "text-red-700"}`}>
                     {transaction.type === "income" ? "+" : "-"}
-                    {formatCurrency(transaction.amount)}
+                    {formatCurrency(Number(transaction.amount))}
                   </span>
                 </div>
               </div>
