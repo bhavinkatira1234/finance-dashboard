@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { PencilIcon, TrashIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -25,7 +24,6 @@ import { RootState } from "@/store";
 import { deleteSavingsGoal, updateSavingsGoal } from "@/store/savingsGoalsSlice";
 
 export function GoalsGrid() {
-  const router = useRouter();
   const dispatch = useDispatch();
   const savingsGoals = useSelector((state: RootState) => state.savingsGoals.savingsGoals);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
